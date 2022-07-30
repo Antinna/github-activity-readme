@@ -1595,7 +1595,7 @@ Toolkit.run(
       // Call the serializer to construct a string
       .map((item) => serializers[item.type](item));
 
-    const readmeContent = fs.readFileSync("./README.md", "utf-8").split("\n");
+    const readmeContent = fs.readFileSync("./profile/README.md", "utf-8").split("\n");
 
     // Find the index corresponding to <!--START_SECTION:activity--> comment
     let startIdx = readmeContent.findIndex(
@@ -1637,7 +1637,7 @@ Toolkit.run(
       );
 
       // Update README
-      fs.writeFileSync("./README.md", readmeContent.join("\n"));
+      fs.writeFileSync("./profile/README.md", readmeContent.join("\n"));
 
       // Commit to the remote repository
       try {
@@ -1688,7 +1688,7 @@ Toolkit.run(
     }
 
     // Update README
-    fs.writeFileSync("./README.md", readmeContent.join("\n"));
+    fs.writeFileSync("./profile/README.md", readmeContent.join("\n"));
 
     // Commit to the remote repository
     try {
